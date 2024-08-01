@@ -32,7 +32,7 @@ addbook.addEventListener("click",function(event){
     container.append(div)
     popupoverlay.style.display="none"
     popupbox.style.display="none"
-});
+})
 
 function deletebook(event){
     event.target.parentElement.remove();

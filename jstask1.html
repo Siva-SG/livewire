@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple task js</title>
+</head>
+<body>
+    <h1>Task 01</h1>
+    <input id="inputbox" onkeyup="update()">
+    <button onclick="update()">Btn</button>
+    <h3 id="result"></h3>
+
+
+
+    <h1>Task 02</h1>
+    <button onclick="upadd()">Add</button>
+    <div id="result2"></div>
+
+
+    
+    <h1>Task 03</h1>
+    <h2 id="result3">Name</h2>
+    <button onclick="update(event)">Shiva</button>
+    <button  onclick="update(event)">Suresh</button>
+    <button  onclick="update(event)">Sudhan</button>
+
+
+    <h1>Task 04</h1>
+    <h2 onclick="deleteitem(event)">One</h2>
+    <h2  onclick="deleteitem(event)">Two</h2>
+    <h2  onclick="deleteitem(event)">Three</h2>
+    <h2  onclick="deleteitem(event)">Four</h2>
+    <h2 onclick="deleteitem(event)">Five</h2>
+    <h2  onclick="deleteitem(event)">Six</h2>
+    <script>
+        // task1
+        var inputboxs = document.getElementById("inputbox")
+        var results = document.getElementById("result")
+
+        function update(){
+            results.textContent = inputboxs.value
+        }
+
+        // task2
+        var div = document.getElementById("result2")
+        function upadd(){
+            // create html tag
+            var head = document.createElement("h1")
+            head.textContent = "Shiva"
+            div.append(head)
+        }
+
+
+        // task3
+        var her = document.getElementById("result3")
+        function update(event){
+            her.textContent=event.target.textContent
+        }
+
+
+        // task4
+        function deleteitem(event){
+            event.target.remove()
+        }
+    </script>
+</body>
+</html>
